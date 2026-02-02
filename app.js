@@ -20,7 +20,7 @@ const CART_KEY = "ice_cart_v1";
 const THEME_KEY = "ice_theme_v1";
 
 // ⚠️ Pon tu número en formato internacional sin + (ej: 1809xxxxxxx)
-const WHATSAPP_NUMBER = "18090000000";
+const WHATSAPP_NUMBER = "18294961480";
 
 // Delivery fijo (puedes cambiarlo a 0 si no aplica)
 const DELIVERY_FEE = 100;
@@ -207,7 +207,7 @@ function buildWhatsAppLink(subtotal, delivery, total) {
   lines.push("Forma de pago: ________");
 
   const text = encodeURIComponent(lines.join("\n"));
-  return `https://wa.me/${8294961480}?text=${text}`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
 }
 
 /* ========= Drawer ========= */
