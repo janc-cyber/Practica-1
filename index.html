@@ -1,0 +1,134 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Heladería Frosty | Venta de Helados</title>
+  <meta name="description" content="Helados artesanales, delivery y pickup. Agrega al carrito y ordena por WhatsApp." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">🍦</div>
+      <div class="brandText">
+        <strong>Heladería Frosty</strong>
+        <small id="subtitle">Helados artesanales • Delivery • Pickup</small>
+      </div>
+    </div>
+
+    <div class="topActions">
+      <button class="btn ghost" id="themeBtn" type="button">🌙</button>
+      <button class="btn cartBtn" id="openCartBtn" type="button">
+        🛒 Carrito <span class="badge" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="heroText">
+        <h1>¡Dale un gustico dulce a tu día! <span class="grad">Helados frescos</span></h1>
+        <p>
+          Elige tu sabor, agrégalo al carrito y ordena por WhatsApp en 1 minuto.
+        </p>
+
+        <div class="heroInfo">
+          <div class="pill">⏱️ 15–30 min</div>
+          <div class="pill">📍 San Pedro de Macorís</div>
+          <div class="pill">💳 Efectivo / Transferencia</div>
+        </div>
+      </div>
+
+      <div class="heroCard">
+        <h3>Oferta de hoy</h3>
+        <p class="muted">2x1 en conos (válido hasta agotar existencias)</p>
+        <button class="btn" id="addPromoBtn" type="button">Agregar promo al carrito</button>
+      </div>
+    </section>
+
+    <!-- Controls -->
+    <section class="controls">
+      <div class="searchBox">
+        <input id="searchInput" type="search" placeholder="Buscar helado… (ej: chocolate, fresa)" />
+      </div>
+
+      <div class="filters">
+        <button class="chip active" data-filter="all">Todos</button>
+        <button class="chip" data-filter="cono">Cono</button>
+        <button class="chip" data-filter="copa">Copa</button>
+        <button class="chip" data-filter="litro">Litro</button>
+        <button class="chip" data-filter="premium">Premium</button>
+      </div>
+    </section>
+
+    <!-- Product grid -->
+    <section>
+      <h2 class="sectionTitle">Menú</h2>
+      <div class="grid" id="productsGrid"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div>
+        <strong>Heladería Frosty</strong>
+        <p class="muted">Horario: Lun–Dom 10:00am – 10:00pm</p>
+      </div>
+      <div class="muted">
+        © <span id="year"></span> • Hecho con 🍦
+      </div>
+    </footer>
+  </main>
+
+  <!-- Cart Drawer -->
+  <aside class="drawer" id="cartDrawer" aria-hidden="true">
+    <div class="drawerHeader">
+      <h3>Tu carrito</h3>
+      <button class="iconBtn" id="closeCartBtn" aria-label="Cerrar">✕</button>
+    </div>
+
+    <div class="drawerBody" id="cartItems"></div>
+
+    <div class="drawerFooter">
+      <div class="totals">
+        <div class="row">
+          <span class="muted">Subtotal</span>
+          <strong id="subtotalText">RD$0</strong>
+        </div>
+        <div class="row">
+          <span class="muted">Delivery</span>
+          <strong id="deliveryText">RD$0</strong>
+        </div>
+        <hr />
+        <div class="row">
+          <span>Total</span>
+          <strong id="totalText">RD$0</strong>
+        </div>
+      </div>
+
+      <div class="checkout">
+        <label class="muted small">Nota (opcional)</label>
+        <textarea id="noteInput" rows="2" placeholder="Ej: sin maní, llamar al llegar…"></textarea>
+
+        <a class="btn w100" id="whatsBtn" href="#" target="_blank" rel="noopener">
+          Comprar por WhatsApp 📲
+        </a>
+        <button class="btn ghost w100" id="clearCartBtn" type="button">Vaciar carrito</button>
+
+        <p class="muted tiny">
+          *El pedido se envía como mensaje por WhatsApp. Puedes ajustar el texto antes de enviarlo.
+        </p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Backdrop -->
+  <div class="backdrop" id="backdrop" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
