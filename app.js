@@ -20,7 +20,7 @@ const CART_KEY = "ice_cart_v1";
 const THEME_KEY = "ice_theme_v1";
 
 // ⚠️ Pon tu número en formato internacional sin + (ej: 1809xxxxxxx)
-const WHATSAPP_NUMBER = "18294961480";
+const WHATSAPP_NUMBER = "8294961480";
 
 // Delivery fijo (puedes cambiarlo a 0 si no aplica)
 const DELIVERY_FEE = 100;
