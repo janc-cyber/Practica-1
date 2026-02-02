@@ -207,7 +207,7 @@ function buildWhatsAppLink(subtotal, delivery, total) {
   lines.push("Forma de pago: ________");
 
   const text = encodeURIComponent(lines.join("\n"));
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
+  return `https://wa.me/${8294961480}?text=${text}`;
 }
 
 /* ========= Drawer ========= */
